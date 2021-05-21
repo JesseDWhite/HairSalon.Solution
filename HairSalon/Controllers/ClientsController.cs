@@ -7,10 +7,10 @@ using System.Linq;
 
 namespace HairSalon.Controllers
 {
-  public class ClientsContoller : Controller
+  public class ClientsController : Controller
   {
     private readonly HairSalonContext _db;
-    public ClientsContoller(HairSalonContext db)
+    public ClientsController(HairSalonContext db)
     {
       _db = db;
     }
@@ -54,6 +54,12 @@ namespace HairSalon.Controllers
       _db.Entry(client).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+
+    public ActionResult Delete(int id)
+    {
+      var thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      return View(thisClient);
     }
 
     [HttpPost, ActionName("Delete")]

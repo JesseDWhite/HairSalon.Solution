@@ -5,18 +5,21 @@
 @using HairSalon.Models
 @model HairSalon.Models.Stylist
 
-<h2>Stylist Details</h2>
+<h2>@Html.DisplayFor(model => model.Name)</h2>
 <hr />
-<h4>@Html.DisplayFor(model => model.Name)</h4>
+<h3>Details</h3>
+<h5>Date Hired: @Html.DisplayFor(model => model.HireDate)</h5>
+<h5>Birthday: @Html.DisplayFor(model => model.BirthDay)</h5>
+<p>@Html.DisplayFor(model => model.Notes)</p>
 
 <p>@Html.ActionLink("Back to All Stylists", "Index")</p>
 <p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
-<p>@Html.ActionLink("Delete cuisine", "Delete", new { id = Model.StylistId })</p>
+<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
 
 @foreach (Client client in ViewBag.Clients)
 {
   if (client.StylistId == Model.StylistId)
   {
-    <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.StylistId})</li>
+    <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.StylistId}) | @Html.DisplayName($"Next Appointment: {client.NextApp}")</li>
   }
 }
