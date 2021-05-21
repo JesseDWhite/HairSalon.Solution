@@ -1,10 +1,19 @@
 ﻿using System.Collections.Generic;
+using System;
 
-namespace Template.Models
+namespace HairSalon.Models
 {
-  public class Placeholder
+  public class Stylist
   {
-    public int PlacehodlerId { get; set; }
-    public string Description { get; set; }
+    public Stylist()
+    {
+      this.Customers = new HashSet<Customer>();
+    }
+    public int StylistId { get; set; }
+    public string Name { get; set; }
+    public DateTime HireDate { get; set; }
+    public DateTime BirthDay { get; set; }
+    public string Notes { get; set; }
+    public virtual ICollection<Customer> Customers { get; set; }
   }
 }
