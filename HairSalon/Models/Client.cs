@@ -3,9 +3,9 @@ using System;
 
 namespace HairSalon.Models
 {
-  public class Customer
+  public class Client
   {
-    public int CustomerId { get; set; }
+    public int ClientId { get; set; }
     public string Name { get; set; }
     public DateTime NextApp { get; set; }
     public string Notes { get; set; }
