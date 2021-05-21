@@ -19,7 +19,4 @@
   <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId}) | @client.Stylist.Name</li>
 }
 
-@if (Stylist > 0)
-{
-  <p>@Html.ActionLink("Add New Client", "Create")</p>
-}
+<p>@Html.ActionLink("Add New Client", "Create")</p>

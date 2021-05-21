@@ -50,8 +50,8 @@ _Claire runs a local Hair Salon where you can get qualitiy cuts from. Claire use
    - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the console app
 6. Visit the application via web browser at: `localhost:5000/`
 ## Known Bugs 🐛
-* _Any known issues_
-* _should go here_
+* _Date fields will show the time of 12:00:00._
+* _User able to add clients even if there are no stylists added yet._
 ## License ⚖
 _MIT © Jesse White 2021_
 ## Contact Information 🤳
