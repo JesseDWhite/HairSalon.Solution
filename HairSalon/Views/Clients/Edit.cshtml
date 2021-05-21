@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+<h1>Edit Information For:</h1>
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ClientId)
+
+  @Html.LabelFor(model => model.Name, new {@class="form-label"})
+  @Html.EditorFor(model => model.Name, new {@class = "form-control", type="text", id="name"})
+  @Html.LabelFor(model => model.NextApp, new {@class="ftorm-label"})
+  @Html.EditorFor(model => model.NextApp, new {@class = "form-control", type="date"})
+  @Html.LabelFor(model => model.Stylist, new {@class="form-label"})
+  @Html.DropDownList("StylistId")
+
+  <input type="submit" value="Save Changes" class="btn btn-warning" />
+}
+<p>@Html.ActionLink("Back to All Clients", "Index")</p>
