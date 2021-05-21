@@ -10,7 +10,8 @@
 @if (@Model.Count == 0)
 {
   <h3>No clients have been added yet</h3>
-
+  <h5>You must add a stylist before adding any clients</h5>
+  <p>@Html.ActionLink("Add New Stylist", "Create", "Stylists")</p>
 }
 
 @foreach (Client client in Model)
@@ -18,4 +19,7 @@
   <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId}) | @client.Stylist.Name</li>
 }
 
-<p>@Html.ActionLink("Add New Client", "Create")</p>
+@if (Stylist > 0)
+{
+  <p>@Html.ActionLink("Add New Client", "Create")</p>
+}
