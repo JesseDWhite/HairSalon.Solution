@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@using HairSalon.Models
+@model HairSalon.Models.Stylist
+
+<h2>Stylist Details</h2>
+<hr />
+<h4>@Html.DisplayFor(model => model.Name)</h4>
+
+<p>@Html.ActionLink("Back to All Stylists", "Index")</p>
+<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
+<p>@Html.ActionLink("Delete cuisine", "Delete", new { id = Model.StylistId })</p>
+
+@foreach (Client client in ViewBag.Clients)
+{
+  if (client.StylistId == Model.StylistId)
+  {
+    <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.StylistId})</li>
+  }
+}
