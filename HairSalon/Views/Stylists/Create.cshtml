@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Stylist
+
+<h4>Add a New Stylist</h4>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name, new {@class="form-label"})
+  @Html.TextBoxFor(model => model.Name, new {@class = "form-control", type="text"})
+  @Html.LabelFor(model => model.HireDate, new {@class="form-label"})
+  @Html.TextBoxFor(model => model.HireDate, new {@class="form-control", type="date"})
+  @Html.LabelFor(model => model.BirthDay, new {@class="form-label"})
+  @Html.TextBoxFor(model => model.BirthDay, new {@class="form-control", type="date"})
+  @Html.LabelFor(model => model.Notes, new {@class="form-label"})
+  @Html.TextBoxFor(model => model.Notes, new {@class = "form-control", type="text"})
+  <input type="submit" value="Add New Stylist" class="btn btn-success" />
+}
+<p>@Html.ActionLink("Back to All Stylists", "Index")</p>
