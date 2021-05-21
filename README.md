@@ -37,8 +37,8 @@ _Claire runs a local Hair Salon where you can get qualitiy cuts from. Claire use
    - Type the following commands to setup the database:
      - `CREATE DATABASE jesse_white;` to make a new database
      - `USE jesse_white;` to connect to the new database
-     - `CREATE TABLE {clients (ClientId INT, SomeProperty VARCHAR (255))};` to create a `{clients}` table
-     - `CREATE TABLE {stylists (TemplateItemId INT, TemplateCategoryId Int)};` to create another new `{stylists}` table
+     - `CREATE TABLE {clients (ClientId INT, Name VARCHAR (255), NextApp DATETIME, Notes VARCHAR(255), StylistId INT)};` to create a `{clients}` table
+     - `CREATE TABLE {stylists (StylistId INT, Name VARCHAR(255), HireDate DATETIME, Birthday DATETIME, Notes VARCHAR(255))};` to create another new `{stylists}` table
 5. To run the console app:
    - Navigate to `{HairSalon.Solution/HairSalon}` in your command line
    - Run the command `dotnet restore` to restore the dependencies that are listed in `{HairSalon.csproj}`
