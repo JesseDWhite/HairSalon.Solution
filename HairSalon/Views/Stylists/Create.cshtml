@@ -17,7 +17,7 @@
   @Html.TextBoxFor(model => model.BirthDay, new {@class="form-control", type="date"})
 
   @Html.LabelFor(model => model.Notes, new {@class="form-label"})
-  @Html.TextBoxFor(model => model.Notes, new {@class = "form-control", type="text"})
+  @Html.TextAreaFor(model => model.Notes, new {@class = "form-control", type="text"})
 
   <input type="submit" value="Add New Stylist" class="btn btn-success" />
 }
