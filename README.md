@@ -1,4 +1,4 @@
-# _Clair's Cuts_
+# _Clair's Cuts_ ✂
 #### _This is our 10th week project for Epicodus that covers the basics for One-to-Many relationships and MySql._
 #### By _Jesse White_
 ## Technologies Used
