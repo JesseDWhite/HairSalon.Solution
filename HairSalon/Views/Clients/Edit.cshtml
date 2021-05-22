@@ -17,9 +17,12 @@
   @Html.LabelFor(model => model.NextApp, new {@class="ftorm-label"})
   @Html.EditorFor(model => model.NextApp, new {@class = "form-control", type="date"})
 
+  @Html.LabelFor(model => model.Notes, new {@class="form-label"})
+  @Html.EditorFor(model => model.Notes, new {@class = "form-control", type="text", id="name", required="required"})
+
   @Html.LabelFor(model => model.Stylist, new {@class="form-label"})
   @Html.DropDownList("StylistId")
 
-  <input type="submit" value="Save Changes" class="btn btn-warning" />
+  <input type="submit" value="Save Changes" class="btn btn-warning mt-5 mb-5" />
 }
 <p>@Html.ActionLink("Back to All Clients", "Index")</p>
