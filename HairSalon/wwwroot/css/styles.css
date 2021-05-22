@@ -39,5 +39,9 @@ body {
   color: white;
 }
 h1, h2, h4 {
+  font-family: 'Pattaya', sans-serif;
   text-align: center;
+}
+h1 {
+  font-size: 50px;
 }
